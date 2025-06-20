@@ -22,13 +22,21 @@ def main():
 
     authenticatePassLength(userPass)
 
-    buffer('Testing Letter Sensitivity\n',3)
+    buffer('Checking For Uppercased Characters\n',2)
 
     authenticateForLoudLetters(userPass)
 
-    buffer('Testing Letter Sensitivity\n',3)
+    buffer('Checking For Lowercased Characters\n',2)
 
     authenticateForLowerLetters(userPass)
+
+    buffer('Checking For Digits In Password\n',2)
+
+    authenticateForNums(userPass)
+
+    buffer('Checking For Special Characters In Password\n',2)
+
+    authenticateForSpecialChars(userPass)
 
 
 
@@ -64,6 +72,7 @@ def authenticateForLowerLetters(password):
             return(0)
 
 
+
 def authenticateForNums(password):
     for char in password:
         if char.isdigit():
@@ -73,10 +82,16 @@ def authenticateForNums(password):
             print('\nProcess Failed. +0\n')
             return(0)
         
-        
 
-
-
+def authenticateForSpecialChars(password):
+    specList = ['!','@','#','$','%','^','&','*','(',')','_','+','=','-','[',']','}','{',';',':',]
+    for char in password:
+        if char in specList:
+            print('\nProcess Passed. +2\n')
+            return(2)
+        else:
+            print('\nProcess Failed. +0\n')
+            return(0)
 
 
 # Takes in any string message, then stalls the process making by any paramater entered time, to make it feel more cryptic? 
