@@ -12,10 +12,11 @@
 import sys
 import time
 
-passStartingScore = 10
 
 
 def main():
+    totalScore = 0
+
     userPass = sys.argv[1]
 
     buffer('Initalzing Password\n',2)
@@ -92,6 +93,7 @@ def authenticateForSpecialChars(password):
         else:
             print('\nProcess Failed. +0\n')
             return(0)
+
 
 
 # Takes in any string message, then stalls the process making by any paramater entered time, to make it feel more cryptic? 
