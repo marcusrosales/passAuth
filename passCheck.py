@@ -21,7 +21,7 @@ def main():
     buffer('initalzing password',3)
 
     authenticatePassLength(userPass)
-
+    authenticateForLoudLetters(userPass)
 
 def authenticateFinal():
     pass
@@ -36,10 +36,17 @@ def authenticatePassLength(password):
     else:
         return(2)
 
-def authenticateCaseLetters(password):
-    
 
 
+
+def authenticateForLoudLetters(password):
+    for char in password:
+        if char.isalpha():
+            print('Process Passed. +2')
+            return(2)
+        else:
+            print('Process Failed. +0')
+            return(0)
 
 
 
