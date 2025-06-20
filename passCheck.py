@@ -1,4 +1,6 @@
-// Pass
+# Password Requirments #
+
+# 
 
 import sys
 
