@@ -8,13 +8,4 @@
 # 1 Or More Number
 # 1 Or More Special Character 
 
-
-
 import sys
-
-def main():
-    print('hello world from main function')
-
-
-
-main()
