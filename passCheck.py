@@ -20,26 +20,21 @@ def main():
     userPass = sys.argv[1]
 
     buffer('Initalzing Password\n',2)
-
-    authenticatePassLength(userPass)
+    totalScore += authenticatePassLength(userPass)
 
     buffer('Checking For Uppercased Characters\n',2)
-
-    authenticateForLoudLetters(userPass)
+    totalScore += authenticateForLoudLetters(userPass)
 
     buffer('Checking For Lowercased Characters\n',2)
-
-    authenticateForLowerLetters(userPass)
+    totalScore += authenticateForLowerLetters(userPass)
 
     buffer('Checking For Digits In Password\n',2)
-
-    authenticateForNums(userPass)
+    totalScore += authenticateForNums(userPass)
 
     buffer('Checking For Special Characters In Password\n',2)
+    totalScore += authenticateForSpecialChars(userPass)
 
-    authenticateForSpecialChars(userPass)
-
-
+    print(f"\nFinal Password Strength Score: {totalScore}/10\n")
 
 
 
