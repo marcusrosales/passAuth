@@ -32,7 +32,7 @@ def main():
 
 
 
-    
+
 
 def authenticatePassLength(password):
     print("Starting Passcode Length Authentication Process")
@@ -62,6 +62,18 @@ def authenticateForLowerLetters(password):
         else:
             print('\nProcess Failed. +0\n')
             return(0)
+
+
+def authenticateForNums(password):
+    for char in password:
+        if char.isdigit():
+            print('\nProcess Passed. +2\n')
+            return(2)
+        else:
+            print('\nProcess Failed. +0\n')
+            return(0)
+        
+        
 
 
 
