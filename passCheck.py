@@ -23,12 +23,21 @@ def main():
     authenticatePassLength(userPass)
 
 
+def authenticateFinal():
+    pass
+
 
 
 
 def authenticatePassLength(password):
+    print("Starting Passcode Length Authentication Process")
     if len(password) < 8:
-        print("length short test")
+        return(0)
+    else:
+        return(2)
+
+def authenticateCaseLetters(password):
+    
 
 
 
