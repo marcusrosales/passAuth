@@ -26,6 +26,13 @@ def main():
 
     authenticateForLoudLetters(userPass)
 
+    buffer('Testing Letter Sensitivity\n',3)
+
+    authenticateForLowerLetters(userPass)
+
+
+
+    
 
 def authenticatePassLength(password):
     print("Starting Passcode Length Authentication Process")
@@ -40,12 +47,23 @@ def authenticatePassLength(password):
 
 def authenticateForLoudLetters(password):
     for char in password:
-        if char.isalpha():
+        if char.isupper():
             print('\nProcess Passed. +2\n')
             return(2)
         else:
             print('\nProcess Failed. +0\n')
             return(0)
+
+def authenticateForLowerLetters(password):
+    for char in password:
+        if char.islower():
+            print('\nProcess Passed. +2\n')
+            return(2)
+        else:
+            print('\nProcess Failed. +0\n')
+            return(0)
+
+
 
 
 
